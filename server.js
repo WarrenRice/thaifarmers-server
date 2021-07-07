@@ -10,8 +10,8 @@ app.use(express.json({ limit: '10mb'}));
 const database = new Datastore('database.db');
 database.loadDatabase();
 
-let client = mqtt.connect('ws://broker.hivemq.com');
-let clientB = mqtt.connect('ws://broker.hivemq.com');
+let client = mqtt.connect('mqtt://broker.hivemq.com');
+let clientB = mqtt.connect('mqtt://broker.hivemq.com');
  
 let parameters = {};
 let tp = "";
