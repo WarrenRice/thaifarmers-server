@@ -12,7 +12,8 @@ let starts = [];
 let ins = [];
 let ends = [];
 
-let ctrl
+let ctrl 
+//ctrl= "11111111";
 let data
 
 let paralist = ['Temperature','Humidity','Light','Water']
@@ -98,7 +99,6 @@ String.prototype.replaceAt = function(index, replacement) {
     if (index >= this.length) {
         return this.valueOf();
     }
- 
     var chars = this.split('');
     chars[index] = replacement;
     return chars.join('');
@@ -171,8 +171,8 @@ function onMessageArrived(message) {
                 mONs[i].html('ON')
             }
         }
-
     }
+
     if (message.destinationName === "Sensors") {
         data = JSON.parse(message.payloadString);
         //console.log(typeof(data));
